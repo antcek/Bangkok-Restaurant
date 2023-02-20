@@ -26,7 +26,7 @@ export default class Main {
     let dataRibbonHolder = document.querySelector('[data-ribbon-holder]');
     dataRibbonHolder.append(this.ribbonMenu.elem);
 
-    this.stepSlider = new StepSlider({ steps: 5, value: 0, })
+    this.stepSlider = new StepSlider({ steps: 5, value: 3, })
     let dataStepSlider = document.querySelector('[data-slider-holder]');
     dataStepSlider.append(this.stepSlider.elem);
 
