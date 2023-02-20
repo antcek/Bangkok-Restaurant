@@ -20,9 +20,9 @@ export default class Modal {
     <div class="modal__header">
       <!--Кнопка закрытия модального окна-->
       <button type="button" class="modal__close">
-        <img src="/assets/images/icons/cross-icon.svg" alt="close-icon" />
+        <img src="/jsbasic-20221028_antonprotasow69/assets/images/icons/cross-icon.svg" alt="close-icon" />
       </button>
-      <h3 class="modal__title">
+      <h3 class="modal__title ">
       Вот сюда нужно добавлять заголовок 
       </h3>
     </div>
