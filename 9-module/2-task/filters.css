@@ -66,18 +66,18 @@
   opacity: 0;
 }
 
-.styled-checkbox + label {
+.styled-checkbox+label {
   position: relative;
   cursor: pointer;
   padding: 0;
   line-height: 1;
 }
 
-.styled-checkbox + label span {
+.styled-checkbox+label span {
   vertical-align: middle;
 }
 
-.styled-checkbox + label:before {
+.styled-checkbox+label:before {
   content: "";
   margin-right: 12px;
   display: inline-block;
@@ -90,28 +90,28 @@
   box-sizing: border-box;
 }
 
-.styled-checkbox:hover + label:before,
-.styled-checkbox:checked + label:before {
+.styled-checkbox:hover+label:before,
+.styled-checkbox:checked+label:before {
   border-color: var(--color-grey);
 }
 
-.styled-checkbox:disabled + label {
+.styled-checkbox:disabled+label {
   color: #b8b8b8;
   cursor: auto;
 }
 
-.styled-checkbox:disabled + label:before {
+.styled-checkbox:disabled+label:before {
   background: #ddd;
 }
 
-.styled-checkbox:checked + label:after {
+.styled-checkbox:checked+label:after {
   content: "";
   position: absolute;
   left: 4px;
   top: 5px;
   width: 12px;
   height: 11px;
-  background: url('/jsbasic-20221028_antonprotasow69/assets/images/icons/check-icon.svg') center no-repeat;
+  background: url('/assets/images/icons/check-icon.svg') center no-repeat;
   background-size: cover;
 }
 
@@ -170,9 +170,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
