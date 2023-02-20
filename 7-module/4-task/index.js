@@ -17,22 +17,18 @@ export default class StepSlider {
       <span class="slider__value">${this.value}</span>
     </div>
   
-    <!--Полоска слайдера-->
     <div class="slider__progress"></div>
-  
-    <!-- Шаги слайдера (вертикальные чёрточки) -->
     <div class="slider__steps">
       
     </div>`
 
     let sliderSteps = this.elem.querySelector('.slider__steps');
-    //  <span class="slider__step-active"></span> - выделенный
-
+    
     for (let i = 0; i < this.steps; i++) {
 
       let s = document.createElement('span');
 
-      if (i === 0) {
+      if (i === this.value) {
         s.classList.add('slider__step-active');
       }
       sliderSteps.append(s);
@@ -46,9 +42,12 @@ export default class StepSlider {
     let slider = this.elem;
     let allSteps = this.elem.querySelectorAll('.slider__steps > span');
     let segmentSlider = allSteps.length - 1;
-    let sliderValue = this.elem.querySelector('.slider__value')
-
-    this.elem.querySelector('.slider__progress').style.width = '0%';
+    let sliderValue = this.elem.querySelector('.slider__value');
+    let thumb = this.elem.querySelector('.slider__thumb');
+    const startValue = `75%`;
+    
+    this.elem.querySelector('.slider__progress').style.width = startValue; // заполненная шкала
+    thumb.style.left = startValue;
 
     slider.addEventListener('click', (event) => {
 
@@ -58,7 +57,6 @@ export default class StepSlider {
       let approximateValue = leftRelative * segmentSlider; // относ. значение на кол-во сегментов
       let value = Math.round(approximateValue); // округление значения
       let valuePercents = value / segmentSlider * 100; // значение для преобразование в проценты
-      let thumb = this.elem.querySelector('.slider__thumb');
 
       let progress = this.elem.querySelector('.slider__progress');
 
